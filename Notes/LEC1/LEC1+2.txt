@@ -1,0 +1,63 @@
+**Induction Proofs:**
+
+Key ideas:
+Base case
+Assume it is true for n values
+Prove it is true for n+1 values. 
+Notes:
+remember, there has to be a way to link the base case to other cases. Sometimes finding the inductive inference is the most difficult part of the puzzle: what are we actually proving by induction?
+
+**Counterexamples:** 
+
+Think small (use the smallest possible test cases)
+
+Think exhaustively (there are a few fundamental things to test, mix and match those systematically)
+
+Think with limits (what happens if i go really big or really small?)
+
+Use the “cheese” method (what about duplicates? find where the algorithm freezes)
+
+Overall, “mix” all possibilities/types of input you can think of. For example, in the largest subset of non overlapping intervals problem, consider combinations of overlapping intervals, disjoint intervals, and non overlapping intervals (these are the 3 types of interval interactions possible). 
+
+Knapsack problem:
+Given a set S of integers, and a knapsack which can store a quantity N, find the subset s in S whose sum is N. 
+
+**Find counterexamples for the given algorithms:**
+
+Smallest first:
+
+S = 1,2 N = 2
+
+Left to right:
+
+S = 1,2 N = 2
+
+Largest First:
+
+S = 3, 4, 5 N=7
+
+**RAM Model of Computation:**
+
+Simple instruction (+ - =): 1 step
+
+Loops and subroutines: not a simple instruction. Depend on the data input and contents of a subroutine
+
+This model is useful but not accurate. Accessing from random memory is much faster than stored memory (e.g. in a disk)
+
+**Best, worst, average case complexity**
+
+Usually, finding the best case complexity is meaningless. The average case is often much more comparable to the worst case. Thus, when referring to the case complexity, assume you are finding the worst case complexity. 
+
+Worst case is also usually easier to analyze.
+
+Randomized algorithms: growing in popularity. Average case complexity analysis important for these functions. 
+
+The actual results of best, worst, and average complexity are complicated for a given input size. Best, worst, average complexities refer to the runtime of the variations of the input itself. Each one has a complicated graph due to details. Rather, it is better to analyze in terms of upper and lower bounds: asymptotic notation.
+
+**The upper and lower bounds can be applied to each of best, worst, and avg time complexities**
+
+f(n) = O(g(n)): if for some C, and n0 in natural numbers, C x g(n) is always greater than f(n) to the right of a certain input value n0.
+
+f(n) = sigma(g(n)): if for some C, and n0 in natural numbers, C x g(n) is always smaller than f(n) to the right of a certain input value n0.
+
+f(n) = theta(g(n)): if for some C1, C2, and n0 in natural numbers, C1 x g(n) is always larger than f(n) and C2 x g(n) is always smaller than f(n) to the right of a certain input value n0.

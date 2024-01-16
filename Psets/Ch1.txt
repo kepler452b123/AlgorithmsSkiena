@@ -1,0 +1,25 @@
+1-7:
+Base case
+if z = 0 then y * z => y * 0 = 0
+
+if z is a multiple of c:
+multiply(yc, z / c) + y * (z % c)
+=> cy * (z / c) + y * (0)
+=> yz 
+
+if z is not a multiple of c:
+multiply(yc, z / c) + y * (z % c)
+=> cy * ( (z - (z % c)) / c) + y * (z % c)
+=> y(z - z % c) + y * (z % c)
+=> yz - y(z % c) + y(z % c)
+=> yz
+QED
+
+1-8:
+Base case
+if n = 0 => p = A0 
+Proof: Maybe prove for an individual term instead of the whole polynomial? Like for i, the term n has been multiplied by x (n - i) times
+and An starts the chain...? Kind of a strange proof.
+
+1-14:
+Base case
